@@ -9,6 +9,8 @@ import {default as SimpleMap} from "./SimpleMap";
 
 require("../styles/index.scss");
 
+const testData = require("./testData.json");
+
 export default class ReactRoot extends Component {
   state = {
     markers: [{
@@ -76,9 +78,7 @@ export default class ReactRoot extends Component {
   render () {
     return (
       <SimpleMap
-        markers={this.state.markers}
-        onMapClick={::this._handle_map_click}
-        onMarkerRightclick={::this._handle_marker_rightclick}
+        items={testData.items}
       />
     )
   }

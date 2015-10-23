@@ -52,6 +52,10 @@ module.exports = {
         exclude: /node_modules/,
         loaders: JSX_LOADER_LIST,
       },
+      {
+        test: /\.json$/,
+        loader: "json",
+      },
     ],
   },
   plugins: [
